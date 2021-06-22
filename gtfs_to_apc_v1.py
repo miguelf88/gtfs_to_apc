@@ -1,7 +1,12 @@
 import os
-import pandas as pd
+import time
 import numpy as np
+import pandas as pd
 from zipfile import ZipFile
+
+# --------------------------------------------------------------------
+
+start_time = time.time()
 
 # --------------------------------------------------------------------
 print("\n")
@@ -78,7 +83,11 @@ apc_final = apc_working[[
 
 # --------------------------------------------------------------------
 
-# write final dataframe to excel
-apc_final.to_excel(excel_writer="PART_reference_" + date_for_feed + ".xlsx", sheet_name='Final', index=False)
+# set file name prefix
+prefix = "testing_PART_reference_"
 
-print("APC reference file successfully created from GTFS...")
+# write final dataframe to excel
+apc_final.to_excel(excel_writer=prefix + date_for_feed + ".xlsx", sheet_name='Final', index=False)
+
+print("\nAPC reference file successfully created from GTFS...")
+print("--- %s seconds ---" % (time.time() - start_time))
