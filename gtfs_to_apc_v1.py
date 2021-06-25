@@ -84,7 +84,7 @@ apc_final = apc_working[[
 # --------------------------------------------------------------------
 
 # set file name prefix
-prefix = "testing_PART_reference_"
+prefix = "PART_reference_"
 
 # write final dataframe to excel
 apc_final.to_excel(excel_writer=prefix + date_for_feed + ".xlsx", sheet_name='Final', index=False)
