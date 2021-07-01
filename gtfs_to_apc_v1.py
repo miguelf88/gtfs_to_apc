@@ -16,7 +16,7 @@ print("Enter the date for the GTFS you are working on.\n")
 date_for_feed = str(input("Use the following format (YYYYMMDD): "))
 
 # set workspace
-path_to_gtfs_workspace = r'C:\Users\miguelf.PARTNC\OneDrive - Piedmont Authority Regional Transportation\Desktop\GTFS Workspace'
+path_to_gtfs_workspace = r'D:\GTFS Workspace'
 path_to_folder = path_to_gtfs_workspace + "\PART_" + date_for_feed
 
 # change working directory
